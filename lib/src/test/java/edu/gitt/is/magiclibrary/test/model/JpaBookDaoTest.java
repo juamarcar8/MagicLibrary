@@ -36,6 +36,7 @@ class JpaBookDaoTest {
 	private static final Logger log = Logger.getLogger(JpaBookDaoTest.class.getName());
 	
 	static Book book1;
+	
 	static Book book2;
 	static Book book11;
 	static JpaBookDao undertest;
