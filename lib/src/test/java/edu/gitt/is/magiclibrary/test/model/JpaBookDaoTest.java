@@ -31,6 +31,7 @@ import edu.gitt.is.magiclibrary.model.entities.Item;
 class JpaBookDaoTest {
 	/**
 	 * Para trazar el c�digo {@link java.util.logging}
+	 * 
 	 */
 	private static final Logger log = Logger.getLogger(JpaBookDaoTest.class.getName());
 	
