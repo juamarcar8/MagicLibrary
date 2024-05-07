@@ -110,6 +110,7 @@ public class JpaBookDao implements Dao<Book> {
 	       Book book= (Book) query.getSingleResult();
 	       
 	       
+	       
 		   return Optional.ofNullable((Book)book);
 		}
 	/**
