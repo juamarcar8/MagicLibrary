@@ -13,16 +13,16 @@ import edu.gitt.is.magiclibrary.model.entities.Book;
 
 import javax.persistence.PersistenceContext;
 /**
- * <p> Esta es la clase para manejar las entidades de tipo Book (libro) {@link edu.gitt.is.magiclibrary.model.entities.Book} y está codificada usando la API JPA {@link javax.persistence}</p>
- * <p> Se sigue el patrón DAO, puede ver un ejemplo en <a href="https://www.baeldung.com/java-dao-pattern">Ejemplo patrón DAO</a></p>
+ * <p> Esta es la clase para manejar las entidades de tipo Book (libro) {@link edu.gitt.is.magiclibrary.model.entities.Book} y estï¿½ codificada usando la API JPA {@link javax.persistence}</p>
+ * <p> Se sigue el patrï¿½n DAO, puede ver un ejemplo en <a href="https://www.baeldung.com/java-dao-pattern">Ejemplo patrï¿½n DAO</a></p>
  * @see javax.persistence.PersistenceContext
- * @author Isabel Román
+ * @author Isabel Romï¿½n
  * @version 0.0 
  */
 @PersistenceContext(unitName = "h2-eclipselink")
 public class JpaBookDao implements Dao<Book> {
 	/**
-	 * Para trazar el código {@link java.util.logging}
+	 * Para trazar el cï¿½digo {@link java.util.logging}
 	 */
 	private static final Logger log = Logger.getLogger(JpaBookDao.class.toString());
 	/**
@@ -100,7 +100,7 @@ public class JpaBookDao implements Dao<Book> {
 /**
  * Busca un libro por su autor
  * @param author Autor a buscar
- * @return Libro {@link java.util.Optional} Relleno con el libro si se encontraba, o vacío si no estaba
+ * @return Libro {@link java.util.Optional} Relleno con el libro si se encontraba, o vacï¿½o si no estaba
  */
 	public Optional<Book> findBookByAuthor(String author) {
 		   log.info("Consulto Book con author= "+author);
@@ -108,13 +108,14 @@ public class JpaBookDao implements Dao<Book> {
 		         .createQuery("Select a from Book a where a.author = :author");
 		   query.setParameter("author", author);		   
 	       Book book= (Book) query.getSingleResult();
-	      
+	       
+	       
 		   return Optional.ofNullable((Book)book);
 		}
 	/**
 	 * Busca un libro por su isbn
 	 * @param isbn ISBN a buscar
-	 * @return Libro {@link java.util.Optional} Relleno con el libro si se encontraba, o vacío si no estaba
+	 * @return Libro {@link java.util.Optional} Relleno con el libro si se encontraba, o vacï¿½o si no estaba
 	 */
 		public Optional<Book> findBookByIsbn(String isbn) {
 			   log.info("Consulto Book con ISBN= "+isbn);
